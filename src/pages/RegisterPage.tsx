@@ -87,10 +87,10 @@ export function RegisterPage() {
         {!success ? (
           <>
             <CardHeader className="text-center">
-              <h1 className="text-3xl font-bold text-gray-900">🚗 AUTOMALL</h1>
+              <h1 className="text-3xl font-bold text-gray-900">🚗 CAVITE AUTOMALL</h1>
               <CardTitle className="mt-2">Create Account</CardTitle>
               <CardDescription>
-                Join AUTOMALL to buy and sell vehicles
+                Join Cavite Automall to buy and sell vehicles
               </CardDescription>
             </CardHeader>
 

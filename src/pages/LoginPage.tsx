@@ -40,10 +40,10 @@ export function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900">🚗 AUTOMALL</h1>
+          <h1 className="text-3xl font-bold text-gray-900">🚗 CAVITE AUTOMALL</h1>
           <CardTitle className="mt-2">Sign In</CardTitle>
           <CardDescription>
-            Access your AUTOMALL account
+            Access your Cavite Automall account
           </CardDescription>
         </CardHeader>
 

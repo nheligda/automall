@@ -48,7 +48,7 @@ export function Navbar() {
               <div className="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
                 <Car className="h-6 w-6 text-white" />
               </div>
-              <span className="font-bold text-xl tracking-tight">AutoProxy<span className="text-blue-400">PH</span></span>
+              <span className="font-bold text-xl tracking-tight">Cavite <span className="text-blue-400">Automall</span></span>
             </Link>
           </div>
 
