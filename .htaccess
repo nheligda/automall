@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /automall%20proj/
+
+  # Serve built asset files (JS/CSS) from backend/public/assets
+  RewriteRule ^assets/(.*)$ backend/public/assets/$1 [L]
+
+  # Prevent further rewriting for already-rewritten asset paths
+  RewriteRule ^backend/public/assets/ - [L]
+
+  # Ensure PHP API endpoints under backend/api are not rewritten to the SPA
+  RewriteRule ^backend/api/ - [L]
+
+  # Ensure uploaded files under backend/uploads are served directly (no SPA rewrite)
+  RewriteRule ^backend/uploads/ - [L]
+
+  # Serve favicon from backend/public if requested at /favicon.ico
+  RewriteRule ^favicon\.ico$ backend/public/favicon.ico [L]
+
+  # Don't rewrite if it's a real file or directory
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Route API requests to backend
+  RewriteRule ^backend/public/api/(.*)$ backend/public/index.php?route=api/$1 [QSA,L]
+  
+  # Route everything else to React frontend
+  RewriteRule ^(.*)$ backend/public/index.html [L]
+</IfModule>
